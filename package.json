@@ -1,0 +1,21 @@
+{
+  "dependencies": {
+    "@tensorflow/tfjs-core": "1.7.3",
+    "@tensorflow/tfjs-converter": "1.7.3",
+    "@tensorflow/tfjs-layers": "1.7.3",
+    "fetch-wechat": "0.0.3"
+  },
+  "name": "nju-cats",
+  "description": "https://git.weixin.qq.com/cuber-straw/qds ## 开发文档 https://developers.weixin.qq.com/miniprogram/dev/framework/",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.weixin.qq.com/cuber-straw/qds.git"
+  },
+  "author": "",
+  "license": "ISC"
+}

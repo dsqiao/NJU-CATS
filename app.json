@@ -1,0 +1,51 @@
+{
+  "pages": [
+    "pages/start/start",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/more/more",
+    "pages/search/search",
+    "pages/info/info",
+    "pages/about/about",
+    "pages/contact-us/contact-us",
+    "pages/result/result"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "南大猫咪图鉴",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#8a8a8a",
+    "selectedColor": "#000000",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "主页",
+        "iconPath": "images/tabBarIcon/home.png",
+        "selectedIconPath": "images/tabBarIcon/onHome.png"
+      },
+      {
+        "pagePath": "pages/search/search",
+        "text": "搜索",
+        "iconPath": "images/tabBarIcon/search.png",
+        "selectedIconPath": "images/tabBarIcon/onSearch.png"
+      },
+      {
+        "pagePath": "pages/more/more",
+        "text": "更多",
+        "iconPath": "images/tabBarIcon/more.png",
+        "selectedIconPath": "images/tabBarIcon/onMore.png"
+      }
+    ],
+    "position": "bottom"
+  },
+  "sitemapLocation": "sitemap.json",
+  "plugins": {
+    "tfjsPlugin": {
+      "version": "0.0.9",
+      "provider": "wx6afed118d9e81df9"
+    }
+  }
+}

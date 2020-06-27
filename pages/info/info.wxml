@@ -1,0 +1,48 @@
+<!--pages/info/info.wxml-->
+<view class="container">
+  <!-- <scroll-view scroll-y="true" style="height: {{scrollHeight}}px"> -->
+  <scroll-view scroll-y="true">
+    <image src="{{imgSrc}}" mode="aspectFill" class="cat-profile"></image>
+    <view class="info">
+      <text class="name">{{name}}</text>
+      <view class="head">性别：
+        <text class="main" wx:if="{{gender === 'm'}}">男</text>
+        <text class="main" wx:elif="{{gender === 'f'}}">女</text>
+        <text class="main" wx:else>未知</text>
+      </view>
+      <view class="head">绝育情况：
+        <text class="main" wx:if="{{sterilization === 'true'}}">已绝育</text>
+        <text class="main" wx:elif="{{sterilization === 'false'}}">未绝育</text>
+        <text class="main" wx:else>未知</text>
+      </view>
+      <view class="head">活动范围：
+        <text class="main">{{area}}</text>
+      </view>
+      <view class="head">外貌特征：
+        <text class="main">{{feature}}</text> 
+      </view>
+      <view class="head">简介：
+        <text class="main">{{description}}</text>
+      </view>
+    </view>
+  </scroll-view>
+
+  <view class="like" bindtap="like" id="{{id}}">
+    <image class="aixin" src="{{like?icon_like:icon_unlike}}" animation="{{animation}}"></image>
+    <text style="color: #8a8a8a;">{{likeNum}}</text>
+  </view>
+
+  <!-- 没有登陆的状态下 -->
+  <!-- <view class="comment" wx:if="{{!hasUserInfo && canIUse}}">
+    <button open-type="getUserInfo" bindgetuserinfo="getUserInfo">登陆后留言</button>
+  </view> -->
+
+  <!-- 登陆状态下 -->
+  <!-- <view wx:else class="comment">
+    <view class="input">
+      <input placeholder="说点什么吧..." placeholder-style="font-weight: 400; font-size: small" bindconfirm="submitComment"></input>
+    </view>
+    <view class="button">发送</view>
+  </view> -->
+
+</view>

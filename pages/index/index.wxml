@@ -1,0 +1,61 @@
+<!-- index.wxml -->
+<view class="container">
+  <view class="card">
+	  <view class="calendar">
+		  <text>{{month}}月</text>
+			<image src="{{calendarURL}}"></image>
+			<text>星期{{day}}</text>
+		</view>
+	  <image src="{{imgSrc}}" mode="aspectFill" class="todaysCat"></image>
+		<block wx:if="{{answered}}">
+		  <view class="titleText">每日一猫 · {{name}}</view>
+			<view class="shortInfo" bindtap="goToInfo">{{shortInfo}}</view>
+		</block>
+		<block wx:else>
+			<view class="titleText">每日一猫 · 这是哪只猫咪？</view>
+			<view class="buttons">
+				<view class="btn btn1" bindtap="btn1tap" animation="{{animation1}}">
+				  <view wx:if="{{flag1 === -1}}" class="un-answered">{{option1}}</view>
+					<view wx:elif="{{flag1 === 0}}" class="clicked-btn">
+					  <image src="../../images/gougou.png" class="chagou"></image>
+					</view>
+					<view wx:else="{{flag1 === 1}}" class="clicked-btn">
+					  <image src="../../images/chacha.png" class="chagou"></image>
+					</view>
+				</view>
+				<view class="btn btn2" bindtap="btn2tap" animation="{{animation2}}">
+				  <view wx:if="{{flag2 === -1}}" class="un-answered">{{option2}}</view>
+					<view wx:elif="{{flag2 === 0}}" class="clicked-btn">
+					  <image src="../../images/gougou.png" class="chagou"></image>
+					</view>
+					<view wx:else="{{flag2 === 1}}" class="clicked-btn">
+					  <image src="../../images/chacha.png" class="chagou"></image>
+					</view>
+				</view>
+				<view class="btn btn3" bindtap="btn3tap" animation="{{animation3}}">
+				  <view wx:if="{{flag3 === -1}}" class="un-answered">{{option3}}</view>
+					<view wx:elif="{{flag3 === 0}}" class="clicked-btn">
+					  <image src="../../images/gougou.png" class="chagou"></image>
+					</view>
+					<view wx:else="{{flag3 === 1}}" class="clicked-btn">
+					  <image src="../../images/chacha.png" class="chagou"></image>
+					</view>
+				</view>
+				<view class="btn brn4" bindtap="btn4tap" animation="{{animation4}}">
+				  <view wx:if="{{flag4 === -1}}" class="un-answered">{{option4}}</view>
+					<view wx:elif="{{flag4 === 0}}" class="clicked-btn">
+					  <image src="../../images/gougou.png" class="chagou"></image>
+					</view>
+					<view wx:else="{{flag4 === 1}}" class="clicked-btn">
+					  <image src="../../images/chacha.png" class="chagou"></image>
+					</view>
+				</view>
+			</view>
+		</block>
+	</view>
+	<view class="selectFromAlbum-btn" bindtap="openAlbum">从相册中选择 > </view>
+	<view class="camera-btn" bindtap="openCamera">
+	  <image src="../../images/xiangji.png" class="camera-icon"></image>
+	  拍照识猫
+	</view>
+</view>

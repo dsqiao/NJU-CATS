@@ -1,0 +1,22 @@
+/* pages/about/about.wxss */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.logo {
+  margin-top: 70rpx;
+  width: 26%;
+}
+.title {
+  margin-top: -278rpx;
+  width: 32%;
+}
+.version {
+  margin-top: -180rpx;
+}
+.description {
+  color: #9C9C9C;
+  margin: 80rpx 80rpx;
+}

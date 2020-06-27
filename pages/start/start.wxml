@@ -1,0 +1,13 @@
+<!--pages/start/start.wxml-->
+<view class="container">
+  <view class="v1">
+    <image class="logo" src="../../images/logo.png" mode="aspectFit"></image>
+    <image src="../../images/title.png" class="title" mode="aspectFit"></image>
+  </view>
+  <view class="v2">
+    <open-data type="userAvatarUrl" class="userProfile"></open-data>
+    <image class="wave" src="../../images/wave.png" mode="aspectFill"></image>
+    <image class="wave wave-bg" src="../../images/wave.png" mode="aspectFill"></image>
+    <view class="btn" bindtap="enter">进入</view>
+  </view>
+</view>

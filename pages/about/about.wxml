@@ -1,0 +1,7 @@
+<!--pages/about/about.wxml-->
+<view class="container">
+  <image src="../../images/logo.png" class="logo" mode="aspectFit"></image>
+  <image src="../../images/title.png" class="title" mode="aspectFit"></image>
+  <view class="version">Version 1.0.0</view>
+  <view class="description">本小程序是为完成2018级互联网计算大作业而做，实现了猫咪种类识别，仙林校区流浪猫信息检索等基本功能，部分信息、素材来源网络。因疫情期间无法返校和其他种种原因，小程序仍有信息收录不全等问题，有待日后完善。</view>
+</view>

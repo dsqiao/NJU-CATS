@@ -1,0 +1,14 @@
+<!--pages/result/result.wxml-->
+<canvas type="2d" id="canvas" canvas-id="canvas"></canvas>
+<image src='{{url}}' mode="aspectFill" class="capturedImg"></image>
+<view class="res-wrapper">
+  <view class="name">{{res}}</view>
+  <view class="description"></view>
+  <block wx:for="{{catsData}}" wx:for-index="index" wx:for-item="item" wx:key="name">
+    <view class="line" wx:if="{{ index != 0 }}"></view>
+    <view class="info-item" bindtap="goToInfo" id="{{index}}">
+      <image src="{{item.profileSrc}}" class="cat-profile"></image>
+      <text>{{item.name}}</text>
+    </view>
+  </block>
+</view>

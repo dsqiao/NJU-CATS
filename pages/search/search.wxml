@@ -1,0 +1,22 @@
+<!--pages/search/search.wxml-->
+<view class="container">
+  <form bindsubmit="formSubmit" class="search-bar-wrapper">
+    <view class="search-bar">
+      <image src="../../images/sousuo.png" class="search-img"></image>
+      <input type="text" name="keyword" class="text-input" placeholder="请输入搜索关键字" placeholder-style="color: #d8d8d8; font-size: small" confirm-type="search" value="{{inputVal}}" focus="{{focus}}" bindconfirm="formSubmit" bindinput="inputTyping"></input>
+      <image class="clear-img" wx:if="{{inputVal.length>0}}" bindtap="clearInput"src="../../images/clear.png"></image>
+    </view>
+  </form>
+  <!-- wx:for-index 数组当前下标的变量名 wx:for-item 数组当前元素的变量名 -->
+  <!-- wx:key 指定列表中项目的唯一标识符 -->
+  <scroll-view scroll-y="true" style="height: {{scrollHeight}}px">
+    <view wx:if="{{ noData }}" class="noData" style="height: {{scrollHeight}}px; line-height: {{scrollHeight}}px;">抱歉，还没有这只猫猫的数据嗷</view>
+    <block wx:for="{{catsData}}" wx:for-index="index" wx:for-item="item" wx:key="name">
+      <view class="line" wx:if="{{ index != 0 }}"></view>
+      <view class="info-item" bindtap="goToInfo" id="{{index}}">
+        <image src="{{item.profileSrc}}" class="cat-profile"></image>
+        <text>{{item.name}}</text>
+      </view>
+    </block>
+  </scroll-view>
+</view>

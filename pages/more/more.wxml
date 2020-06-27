@@ -1,0 +1,34 @@
+<view class="container">
+
+  <!-- 头像 + 昵称 -->
+  <view class="userinfo">
+    <block wx:if="{{!hasUserInfo && canIUse}}">
+      <view class="userinfo-avatar">
+        <button open-type="getUserInfo" bindgetuserinfo="getUserInfo"></button>
+      </view>
+      <text class="userinfo-nickname">点击头像登陆</text>
+    </block>
+
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{ userInfo.avatarUrl }}" mode="cover"></image>
+      <text class="userinfo-nickname">{{ userInfo.nickName }}</text>
+    </block>
+  </view>
+
+  <view class="divLine-1"></view>
+  <view class="bar" bindtap="navToAbout">
+    <text class="text">关于</text>
+    <image src="../../images/you.png" class="arrow"></image>
+  </view>
+  <view class="divLine"></view>
+  <view class="bar" bindtap="navToContact">
+    <text class="text">联系我们</text>
+    <image src="../../images/you.png" class="arrow"></image>
+  </view>
+  <view class="divLine"></view>
+  <view class="bar">
+    <text class="text">版本</text>
+    <text class="versionNo">v 1.0.0</text>
+  </view>
+  <view class="divLine"/>
+</view>

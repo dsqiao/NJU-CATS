@@ -1,0 +1,107 @@
+page {
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+}
+.v1{
+  height: 50%;
+  width: 100%;
+}
+.v2 {
+  height: 50%;
+  width: 100%;
+}
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  animation: container-rise 2s cubic-bezier(0.23, 1, 0.32, 1) .75s forwards;
+  opacity: 0;
+}
+/* 容器向上渐入动画 */
+@keyframes container-rise {
+  from {opacity: 0; transform: translate3d(0, 60rpx, 0); }
+  to {opacity: 1; transform: translate3d(0, 0, 0); }
+}
+
+.logo {
+  position: absolute;
+  top: 0rpx;
+  /* margin-left 设置为宽度的一半，即可有居中效果 */
+  left: 50%;
+  width: 420rpx;
+  margin-left: -210rpx;
+}
+.title {
+  position: absolute;
+  top: 280rpx;
+  width: 500rpx;
+  left: 50%;
+  margin-left: -250rpx;
+}
+.userProfile {
+  position: absolute;
+  left: 50%;
+  margin-left: -80rpx;
+  width: 160rpx;
+  height: 160rpx;
+  bottom: 21vh;
+  border-radius: 50%;
+  overflow: hidden;
+  animation: sway 10s ease-in-out infinite;
+}
+
+
+/* 头像左右摇摆动画 */
+@keyframes sway{
+  0% {transform: translate3d(0,20rpx,0) rotate(-15deg); }
+  17% {transform: translate3d(0,0rpx,0) rotate(25deg); }
+  34% {transform: translate3d(0,-20rpx,0) rotate(-20deg); }
+  50% {transform: translate3d(0,-10rpx,0) rotate(15deg); }
+  67% {transform: translate3d(0,10rpx,0) rotate(-25deg); }
+  84% {transform: translate3d(0,15rpx,0) rotate(15deg); }
+  100% {transform: translate3d(0,20rpx,0) rotate(-15deg); }
+}
+
+.wave {
+  position: absolute;
+  z-index: 3;
+  right: 0;
+  bottom: 0;
+  height: 25vh;
+  width: 2250rpx;
+  animation: wave 10s linear 0s infinite alternate;
+  opacity: 0.45;
+}
+ 
+.wave-bg {
+  z-index: 1;
+  animation: wave-bg 10.25s linear 0s infinite alternate;
+}
+@keyframes wave{
+  from {transform: translate3d(125rpx,0,0);}
+  to {transform: translate3d(1125rpx,0,0);}
+}
+@keyframes wave-bg{
+  from {transform: translate3d(375rpx,0,0);}
+  to {transform: translate3d(1375rpx,0,0);}
+}
+.btn {
+  background-color: white;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+  font-size: small;
+  z-index: 5;
+  position: absolute;
+  bottom: 85rpx;
+  border-style: none;
+  border-radius: 18px;
+  height: 30px;
+  line-height: 30px;
+  left: 50%;
+  width: 80px;
+  margin-left: -45px;
+  text-align: center;
+}
